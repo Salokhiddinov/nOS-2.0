@@ -17,10 +17,10 @@ import BaseBackground from "./components/base-components/BaseBackground.vue"
 import BaseGrid from './components/UI/BaseGrid.vue'
 import TheLockscreen from './components/UI/TheLockscreen.vue'
 import TheStart from './components/UI/TheStart.vue'
-
+import TheLoader from './components/UI/TheLoader.vue'
 
 export default {
-   components:{BaseBackground, BaseGrid, TheStart, TheLockscreen},
+   components:{BaseBackground, BaseGrid, TheStart, TheLockscreen, TheLoader},
    data(){
       return{
          loader: true,
@@ -66,7 +66,7 @@ export default {
 .the-loader{
    position: absolute;
    display: block;
-   z-index: 6;
+   z-index: 10;
    background-color: rgba(0, 0, 0, 0.952);
    width: 100%;
    height: 100vh;
