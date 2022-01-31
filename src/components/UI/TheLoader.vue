@@ -3,7 +3,7 @@
     <div class="loader">
       <h3>Loading</h3>
       <div class="loading-loader">
-        <img src="../../assets/loader.png" alt="loader" />
+        <img src="../../assets/loader1.png" alt="loader" />
       </div>
     </div>
   </div>
