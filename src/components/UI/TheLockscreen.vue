@@ -2,7 +2,7 @@
   <div class="lockscreen"  v-if="isLocked">
     <div class="lock-form">
       <h2>Welcome, User💻</h2>
-      <form @submit.prevent="$emit('disableLock', disableLock)">
+      <form @submit.prevent>
         <div>
           <label>Password: </label>
           <input
@@ -21,7 +21,7 @@
 
 <script>
 export default {
-  // emits:['disableLock'],
+  emits:['disableLock'],
   data() {
     return {
       isLocked: true,
@@ -36,6 +36,7 @@ export default {
         this.isLocked = false;
         this.wrongPin = false;
         this.inputPin = '';
+        this.$emit('disableLock')
       } else {
         this.wrongPin = true;
         this.inputPin = '';

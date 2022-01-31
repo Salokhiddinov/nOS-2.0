@@ -2,7 +2,7 @@
 <div class="base-bg">
    <BaseBackground class="base-background">
       <TheLoader class="the-loader" v-if="loader"/>
-      <TheLockscreen class="the-lockscreen" @disableLock='disableLock($event)'/>
+      <TheLockscreen class="the-lockscreen" />
       <BaseGrid class="base-grid" />
       <TheStart class="the-start" />
       <BaseWindow class="base-window">
@@ -24,18 +24,19 @@ export default {
    data(){
       return{
          loader: true,
+         isLocked: true,
       }
    },
    mounted(){
       setInterval(() => {
-         this.loader = false
+         this.loader = false;
       }, 5000);
+   },
+   methods:{
+      disableLock(isLocked){
+         this.isLocked = isLocked;
+      }
    }
-   // methods:{
-   //    disableLock(isLocked){
-   //       this.isLocked = isLocked
-   //    }
-   // }
 }
 
 
