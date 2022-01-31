@@ -3,7 +3,7 @@
     <div class="loader">
       <h3>Loading</h3>
       <div class="loading-loader">
-        <img src="../../assets/loader1.png" alt="loader" />
+        <img src="../../assets/loader.png" alt="loader" />
       </div>
     </div>
   </div>
@@ -19,7 +19,7 @@ img {
   height: 10rem;
   animation: loading 5s forwards;
   margin: auto;
-  animation: loading 8s;
+  animation: loading 5s;
 }
 .bg-loader {
   position: relative;
@@ -46,6 +46,6 @@ img {
 
 @keyframes loading { 
     from { transform: rotate(0deg); }
-    to { transform: rotate(9000deg); } 
+    to { transform: rotate(3000deg); } 
 } 
 </style>
